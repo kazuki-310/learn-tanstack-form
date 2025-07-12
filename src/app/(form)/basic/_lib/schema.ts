@@ -10,7 +10,7 @@ export const JOB_OPTIONS = [
 
 export const formSchema = z.object({
 	name: z.string().min(1, "名前は必須です"),
-	email: z.string().email("有効なメールアドレスを入力してください"),
+	email: z.email("有効なメールアドレスを入力してください"),
 	age: z
 		.number()
 		.min(0, "年齢は0以上である必要があります")

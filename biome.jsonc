@@ -75,6 +75,19 @@
 					}
 				}
 			}
+		},
+		{
+			"include": ["src/env.mjs"],
+			"linter": {
+				"rules": {
+					"style": {
+						"useNamingConvention": "off"
+					},
+					"nursery": {
+						"noProcessEnv": "off"
+					}
+				}
+			}
 		}
 	]
 }

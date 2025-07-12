@@ -15,6 +15,7 @@
 			"all": true,
 			"nursery": {
 				"all": true,
+				"noSecrets": "off",
 				"useSortedClasses": {
 					"level": "error",
 					"fix": "safe",

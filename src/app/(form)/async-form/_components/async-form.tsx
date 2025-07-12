@@ -1,8 +1,8 @@
 "use client";
 import type { JSX } from "react";
+import { JOB_OPTIONS } from "~/app/(form)/_lib/constans";
 import { checkEmailDuplicate } from "~/app/(form)/async-form/_lib/actions";
-import { JOB_OPTIONS } from "~/app/(form)/async-form/_lib/schema";
-import { formSchema } from "~/app/(form)/async-form/_lib/schema";
+import { asyncFormSchema } from "~/app/(form)/async-form/_lib/schema";
 import { useAppForm } from "~/hooks/useAppForm";
 import { cn } from "~/util/cn";
 
@@ -24,7 +24,7 @@ export function AsyncForm(): JSX.Element {
 	const form = useAppForm({
 		defaultValues,
 		validators: {
-			onChange: formSchema,
+			onChange: asyncFormSchema,
 		},
 		onSubmit: ({ value }): void => {
 			alert(JSON.stringify(value, null, 2));

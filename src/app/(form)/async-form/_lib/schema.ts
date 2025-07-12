@@ -1,14 +1,7 @@
 import { z } from "zod";
+import { JOB_OPTIONS } from "~/app/(form)/_lib/constans";
 
-export const JOB_OPTIONS = [
-	"エンジニア",
-	"デザイナー",
-	"マーケター",
-	"営業",
-	"その他",
-] as const;
-
-export const formSchema = z.object({
+export const asyncFormSchema = z.object({
 	name: z.string().min(1, "名前は必須です"),
 	email: z.string().email("有効なメールアドレスを入力してください"),
 	age: z

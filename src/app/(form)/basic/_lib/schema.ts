@@ -8,7 +8,7 @@ export const JOB_OPTIONS = [
 	"その他",
 ] as const;
 
-export const formSchema = z.object({
+export const basicFormSchema = z.object({
 	name: z.string().min(1, "名前は必須です"),
 	email: z.email("有効なメールアドレスを入力してください"),
 	age: z
@@ -28,5 +28,3 @@ export const formSchema = z.object({
 		.boolean()
 		.refine((val) => val === true, "利用規約に同意してください"),
 });
-
-export type FormSchema = z.infer<typeof formSchema>;

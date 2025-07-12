@@ -1,0 +1,30 @@
+{
+	"permissions": {
+		"allow": [
+			"Bash(mkdir:*)",
+			"Bash(mv:*)",
+			"Bash(rm:*)",
+			"Bash(pnpm install:*)",
+			"Bash(curl:*)",
+			"Bash(find:*)",
+			"Bash(pnpm dev:*)",
+			"Bash(cp:*)",
+			"Bash(ls:*)",
+			"Bash(pnpm build:*)",
+			"Bash(pnpm fix:*)"
+		]
+	},
+	"hooks": {
+		"PostToolUse": [
+			{
+				"matcher": "Write|Edit|MultiEdit",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "pnpm fix"
+					}
+				]
+			}
+		]
+	}
+}

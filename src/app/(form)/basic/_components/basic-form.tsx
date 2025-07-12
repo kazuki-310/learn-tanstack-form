@@ -26,7 +26,7 @@ export function BasicForm(): JSX.Element {
 			onChange: formSchema,
 		},
 		onSubmit: ({ value }): void => {
-			alert(value);
+			alert(JSON.stringify(value, null, 2));
 		},
 	});
 

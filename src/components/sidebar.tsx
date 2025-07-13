@@ -3,12 +3,16 @@ import type { JSX } from "react";
 
 const NAVIGATION_ROUTES = [
 	{
-		href: "/basic",
+		href: "/basic-form",
 		label: "Basic Form",
 	},
 	{
 		href: "/async-form",
 		label: "Async Form",
+	},
+	{
+		href: "/server-functions-form",
+		label: "Server Functions Form",
 	},
 ] as const;
 

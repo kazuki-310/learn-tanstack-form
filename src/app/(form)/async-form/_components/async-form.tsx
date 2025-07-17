@@ -1,8 +1,9 @@
 "use client";
 import type { JSX } from "react";
-import { JOB_OPTIONS } from "~/app/(form)/_lib/constans";
+
 import { checkEmailDuplicate } from "~/app/(form)/async-form/_lib/actions";
 import { asyncFormSchema } from "~/app/(form)/async-form/_lib/schema";
+import { JOB_OPTIONS, JOB_TYPE, type JobValue } from "~/constants/job";
 import { useAppForm } from "~/hooks/useAppForm";
 import { cn } from "~/util/cn";
 
@@ -16,7 +17,7 @@ export function AsyncForm(): JSX.Element {
 			city: "",
 			postalCode: "",
 		},
-		job: "エンジニア",
+		job: JOB_TYPE.ENGINEER as JobValue,
 		website: "",
 		termsAccepted: false,
 	};
@@ -125,8 +126,8 @@ export function AsyncForm(): JSX.Element {
 						<field.SelectField
 							label="Job"
 							selectOptions={JOB_OPTIONS.map((job) => ({
-								value: job,
-								label: job,
+								value: job.value,
+								label: job.label,
 							}))}
 						/>
 					)}

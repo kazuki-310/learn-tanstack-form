@@ -1,7 +1,8 @@
 "use client";
 
 import type { JSX } from "react";
-import { JOB_OPTIONS, basicFormSchema } from "~/app/(form)/basic/_lib/schema";
+import { basicFormSchema } from "~/app/(form)/basic-form/_lib/schema";
+import { JOB_OPTIONS, JOB_TYPE, type JobValue } from "~/constants/job";
 import { useAppForm } from "~/hooks/useAppForm";
 import { cn } from "~/util/cn";
 
@@ -15,7 +16,7 @@ export function BasicForm(): JSX.Element {
 			city: "",
 			postalCode: "",
 		},
-		job: "エンジニア",
+		job: JOB_TYPE.ENGINEER as JobValue,
 		website: "",
 		termsAccepted: false,
 	};
@@ -98,8 +99,8 @@ export function BasicForm(): JSX.Element {
 						<field.SelectField
 							label="Job"
 							selectOptions={JOB_OPTIONS.map((job) => ({
-								value: job,
-								label: job,
+								value: job.value,
+								label: job.label,
 							}))}
 						/>
 					)}

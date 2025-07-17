@@ -88,6 +88,16 @@
 					}
 				}
 			}
+		},
+		{
+			"include": ["**/constants/**"],
+			"linter": {
+				"rules": {
+					"style": {
+						"useNamingConvention": "off"
+					}
+				}
+			}
 		}
 	]
 }

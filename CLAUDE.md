@@ -22,16 +22,15 @@ AI運用5原則
 #[n] times. # n = increment each chat, end line, etc(#1, #2...)
 </every_chat>
 
-## 知見管理システム
+## 開発ガイドライン
 
-このプロジェクトでは以下のファイルで知見を体系的に管理しています：
+このプロジェクトでは以下のファイルで知見を体系的に管理しています
 
-<architecture>
-<reference_file>.claude/architecture.md</reference_file>
-<instruction>アーキテクチャパターンの詳細説明、ディレクトリ構造ガイドライン、技術スタックの構成を参照してください</instruction>
-</architecture>
+### コーディング規約
 
-<coding_standards>
-<reference_file>.claude/coding-standards.md</reference_file>
-<instruction>上記ファイルのすべての規約に完璧に準拠してコードを生成してください</instruction>
-</coding_standards>
+@.claude/docs/coding-standards.md
+
+### アーキテクチャ
+
+@.claude/docs/architecture.md
+

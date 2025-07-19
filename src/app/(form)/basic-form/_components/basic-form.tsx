@@ -4,14 +4,11 @@ import type { JSX } from "react";
 import { basicFormSchema } from "~/app/(form)/basic-form/_lib/schema";
 import { JOB_OPTIONS, JOB_TYPE, type JobValue } from "~/constants/job";
 import { useAppForm } from "~/hooks/useAppForm";
-import { cn } from "~/util/cn";
 
 export function BasicForm(): JSX.Element {
 	const defaultValues = {
 		name: "",
 		email: "",
-		age: 0,
-		hobbies: [""],
 		address: {
 			city: "",
 			postalCode: "",
@@ -40,50 +37,6 @@ export function BasicForm(): JSX.Element {
 
 				<form.AppField name="email">
 					{(field): JSX.Element => <field.TextField label="Email" />}
-				</form.AppField>
-
-				<form.AppField name="age">
-					{(field): JSX.Element => <field.NumberField label="Age" />}
-				</form.AppField>
-
-				<form.AppField name="hobbies" mode="array">
-					{(field): JSX.Element => (
-						<div className="flex flex-col gap-2">
-							{field.state.value.map((_, index) => (
-								<div key={String(index)} className="flex items-end gap-2">
-									<form.AppField name={`hobbies[${index}]`}>
-										{(subField): JSX.Element => (
-											<subField.TextField label={`Hobby ${index + 1}`} />
-										)}
-									</form.AppField>
-
-									{field.state.value.length > 1 && (
-										<button
-											type="button"
-											onClick={(): void => field.removeValue(index)}
-											disabled={field.state.value.length <= 1}
-											className={cn(
-												"h-[44px] rounded-md px-3 py-1 text-white",
-												field.state.value.length <= 1
-													? "cursor-not-allowed bg-gray-400"
-													: "bg-red-500 hover:bg-red-600",
-											)}
-										>
-											削除
-										</button>
-									)}
-								</div>
-							))}
-
-							<button
-								type="button"
-								onClick={(): void => field.pushValue("")}
-								className="w-[100px] rounded-md bg-blue-500 px-3 py-1 text-white hover:bg-blue-600"
-							>
-								追加
-							</button>
-						</div>
-					)}
 				</form.AppField>
 
 				<form.AppField name="address.city">

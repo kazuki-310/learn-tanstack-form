@@ -72,12 +72,12 @@ type User = {
 
 ```tsx
 // NG: 役割が不明確
-`client.tsx`
-`component.tsx`
+`client.tsx`;
+`component.tsx`;
 
 // Good: 目的が明確
 `user-profile-form.tsx`;
-`campaign-list.tsx;
+`campaign-list.tsx`;
 ```
 
 ```typescript
@@ -383,14 +383,14 @@ const { id, name } = user;
 
 ```tsx
 const data = {
-  user = {
-    id: 1
-    name: "Taro Yamada"
+  user: {
+    id: 1,
+    name: "Taro Yamada",
     address: {
       city: "Tokyo"
     }
   }
-}
+};
 
 // NG
 console.log(data.user.id);

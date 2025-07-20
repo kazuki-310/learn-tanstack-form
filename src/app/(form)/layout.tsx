@@ -1,5 +1,5 @@
 import type { NextLayoutProps } from "~/app/type";
-import { Sidebar } from "~/components/sidebar";
+import { Sidebar } from "~/components/layout/sidebar";
 
 export default function Layout({ children }: NextLayoutProps): React.ReactNode {
 	return (

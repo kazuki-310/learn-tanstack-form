@@ -34,12 +34,11 @@ TanStack Formを学習するためのNext.js 15 App Routerプロジェクトで�
 - `src/components/` - 再利用可能なコンポーネント
   - `form-fields/` - フォームフィールドコンポーネント
     - `text-field.tsx` - テキスト入力フィールド
-    - `number-field.tsx` - 数値入力フィールド  
     - `checkbox-field.tsx` - チェックボックスフィールド
     - `select-field.tsx` - セレクトフィールド
   - `button/` - ボタンコンポーネント
     - `subscribe-button.tsx` - 送信ボタン
-  - `header.tsx` - ヘッダーコンポーネント
+  - `layout/` - レイアウトコンポーネント
 
 ### フック・ユーティリティ構造
 
